@@ -1,4 +1,4 @@
-console.log('test depuis main');
+/* console.log('test depuis main');
 const livresDiv = document.querySelector('#livres');
 let livres = [
     {id: 1, titre: "Ravagenpm init", resume: "Ravage présente le naufrage d'une société mature, dans laquelle, un jour, l'électricité disparaît et plus aucune machine ne peut fonctionner. Les habitants, anéantis par la soudaineté de la catastrophe, sombrent dans le chaos, privés d'eau courante, de lumière et de moyens de déplacement.", isbn: "978-2070362387"},
@@ -12,4 +12,22 @@ function loadBooks(livres) {
         .join('');
     livresDiv.innerHTML = allBooks; 
 }
-loadBooks(livres);
+loadBooks(livres); */
+console.log('test depuis main');
+const livresDiv = document.querySelector('#livres');
+
+function loadBooks() {
+    fetch('http://localhost:3001/livres')
+        .then(response => {
+            response.json()
+              .then(livres => {
+                 const allBooks = livres.map(t => `<div><b>${t.titre} : </b> ${t.resume} - ${t.isbn} </div>`)
+                    .join('');
+
+                 livresDiv.innerHTML = allBooks;
+               });
+        })
+        .catch(console.error);
+}
+
+loadBooks(); 

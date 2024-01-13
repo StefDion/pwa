@@ -11,14 +11,20 @@
       </head>    
       <body id="page-top">
             <div class="row">
-              <div class="col"><a href="index.html">accueil</a></div>
-              <div class="col"><a href="add_book.html">livres</a></div>
-              <div class="col"><a href="contact.html">contact</a></div>
+              <div class="col"><a href="index.html">Accueil</a></div>
+              <div class="col"><a href="add_book.html">Ajout</a></div>
+              <div class="col"><a href="contact.html">Contact</a></div>
             </div>
-            <h1>Ajouter un livre</h1>
+            
             <h2>Ajouter ce livre :</h2>
             <div id="addform">
-                <input type="text" placeholder="titre du livre" id="titre"> <button id="add">ajouter</button>
+              <form id="add-livre-form">
+                <input type="text" placeholder="Titre du livre" id="livre-titre"> <br>
+                <input type="text" placeholder="Résumé" id="livre-resume"> <br>
+                <input type="text" placeholder="isbn" id="livre-isbn"> <br>            
+                              
+                <button type="submit">ajouter</button>
+              </form>
             </div>
             <script src="add_book.js"></script>
             

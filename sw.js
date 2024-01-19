@@ -94,3 +94,10 @@ self.addEventListener('activate', (evt) => {
         }
         evt.notification.close();
     });
+
+    self.addEventListener('push', evt =>  {
+        console.log(evt);
+        console.log('data envoyée par la push notification des dev tools : ', evt.data.text())
+        var title = evt.data.text();
+        evt.waitUntil(self.registration.showNotification(title, { body: 'ça marche :)', image: 'Images/icons/icon-152x152.png'}));
+    });

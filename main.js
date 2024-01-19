@@ -23,4 +23,12 @@ if(navigator.serviceWorker) {
         .catch(err => console.error('service worker NON enregistré', err));
 } 
 
-
+if (window.Notification && window.Notification !== 'denied') {
+    Notification.requestPermission(perm => {
+        if(perm === 'granted') {
+            const notif = new Notification('Hello notification');
+        } else {
+            console.log('autorisation de recevoir des notification réfusée');
+        }
+    })
+}

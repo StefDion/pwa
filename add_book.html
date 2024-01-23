@@ -8,22 +8,39 @@
         <title>Bibliothèque</title>    
         <link rel="stylesheet" href="vendors/bootstrap.min.css">
         <link href="style.css" rel="stylesheet">
+        <link rel="manifest" href="manifest.json">
+        <link rel="icon" href="images/favicon.ico" type="image/x-icon">
       </head>    
       <body id="page-top">
-            <div class="row">
-              <div class="col"><a href="index.html">Accueil</a></div>
-              <div class="col"><a href="add_book.html">Ajout</a></div>
-              <div class="col"><a href="contact.html">Contact</a></div>
+        <div class="nav">
+          <input type="checkbox" id="nav-check">
+          <div class="nav-header">
+            <div class="nav-title">
+              Biblio
             </div>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+          <div class="nav-links">
+            <div class="col"><a href="index.html">Accueil</a></div>
+            <div class="col"><a href="add_book.html">Ajout</a></div>
+            <div class="col"><a href="contact.html">Contact</a></div>
+          </div>
+        </div>
             
-            <h2>Ajouter ce livre :</h2>
+            <h1>Ajouter ce livre :</h1>
             <div id="addform">
               <form id="add-livre-form">
                 <input type="text" placeholder="Titre du livre" id="livre-titre"> <br>
-                <input type="text" placeholder="Résumé" id="livre-resume"> <br>
-                <input type="text" placeholder="isbn" id="livre-isbn"> <br>            
+                <textarea id="resume" rows="10" cols="28" placeholder="Résumé" id="livre-resume"></textarea> <br>
+                <input type="text" placeholder="isbn" id="livre-isbn">             
                               
-                <button type="submit">ajouter</button>
+                <button id="submit" type="submit">Ajouter</button>
               </form>
             </div>
             <script src="add_book.js"></script>

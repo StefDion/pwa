@@ -7,16 +7,74 @@
           <meta name="author" content="">    
           <title>Bibliothèque</title>    
           <link rel="stylesheet" href="vendors/bootstrap.min.css">
+          <link rel="stylesheet" href="vendors/bootstrap.min.css">
+          <link href="style.css" rel="stylesheet">
+          <link rel="manifest" href="manifest.json">
+          <link rel="icon" href="images/favicon.ico" type="image/x-icon">
         </head>    
         <body id="page-top">
-              <div class="row">
+              <div class="nav">
+                <input type="checkbox" id="nav-check">
+                <div class="nav-header">
+                  <div class="nav-title">
+                    Biblio
+                  </div>
+                </div>
+                <div class="nav-btn">
+                  <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </label>
+                </div>
+                <div class="nav-links">
                   <div class="col"><a href="index.html">Accueil</a></div>
                   <div class="col"><a href="add_book.html">Ajout</a></div>
                   <div class="col"><a href="contact.html">Contact</a></div>
+                </div>
               </div>
-          <h1>Nous contacter</h1>
-          <h2>129 Rue du Landreau, 44300 Nantes, France</h2>
-          <div id="map">todo</div>
+          
+              <div class="container">
+                <div class="row header">
+                  <h1>CONTACTEZ NOUS &nbsp;</h1>
+                  <h3>Remplissez le formulaire ci-dessous!</h3>
+                </div>
+                <div class="row body">
+                  <form action="#">
+                    <ul>
+                      
+                      <li>
+                        <p class="left">
+                          
+                          <input type="text" name="first_name" placeholder="Prénom" />
+                        </p>
+                        <p class="pull-right">
+                          
+                          <input type="text" name="last_name" placeholder="Nom" />      
+                        </p>
+                      </li>
+                      
+                      <li>
+                        <p>
+                          
+                          <input type="email" name="email" placeholder="Email" />
+                        </p>
+                      </li>        
+                      <li><div class="divider"></div></li>
+                      <li>
+                        
+                        <textarea cols="40" rows="5" name="message" placeholder="Votre message"></textarea>
+                      </li>
+                      
+                      <li>
+                        <input class="btn btn-submit" type="submit" value="Envoyer" />
+                        <small>ou appuyer sur <strong>entrer</strong></small>
+                      </li>
+                      
+                    </ul>
+                  </form>  
+                </div>
+              </div>
           <script src="contact.js"></script>
           
         </body>

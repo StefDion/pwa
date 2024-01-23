@@ -6,7 +6,7 @@ function loadBooks() {
         .then(response => {
             response.json()
               .then(livres => {
-                 const allBooks = livres.map(t => `<div><b>${t.titre} : </b> ${t.resume} - ${t.isbn} </div>`)
+                 const allBooks = livres.map(t => `<div><b>${t.titre} : </b> ${t.resume} - ${t.isbn} </div><br>`)
                     .join('');
 
                  livresDiv.innerHTML = allBooks;
